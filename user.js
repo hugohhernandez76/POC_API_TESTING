@@ -5,14 +5,7 @@ const request = supertest("https://gorest.co.in/public/v2/");
 const TOKEN =
   "70d07decbf91739af548ee45a481441083c14da609326ac12cab670f35391e07";
 describe("Users", () => {
-  it("GET/Users", () => {
-    // request.get(`users?access-token=${TOKEN}`).end((err,res) => {
-    //     expect(res.statusCode).to.equal(200);
-    //     expect(res.body).to.exist;
-    //     expect(res.body).to.not.be.empty;
-    //     console.log(res.body);
-    //     done();
-    //   });
+  it("GET/Users", () => 
     return request.get(`users?access-token=${TOKEN}`).then((res) => {
       expect(res.statusCode).to.equal(200);
       expect(res.body).to.exist;
